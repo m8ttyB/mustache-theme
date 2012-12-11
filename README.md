@@ -5,7 +5,7 @@ This is the theme for [secretmustache.com]. It uses [Pelican] a static blog gene
 
 If you find errors or would like to submit amendments I would be more than happy to merge your pull request.
 
-The following [contributors] have submitted pull requests to [secretmustache-theme].
+The following [contributors] have participated on this project.
 
 Using this theme
 ----------------
