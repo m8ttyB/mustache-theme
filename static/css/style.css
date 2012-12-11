@@ -159,3 +159,33 @@ img.align-left {
   -moz-border-radius-topright: 10px;
   -webkit-border-top-right-radius: 10px;
 }
+
+/* Binary Post Times styles */
+span.off {
+  height: 5px;
+  width: 5px;
+  border: 1px solid grey;
+  margin-left: 1px;
+  margin-right: 1px;
+  font-size: 10px;
+  color: #EEE;
+  border-radius: 10px;
+}
+
+span.on {
+  height: 5px;
+  width: 5px;
+  border: 1px solid grey;
+  margin-left: 1px;
+  margin-right: 1px;
+  color: #EEE;
+  font-size: 10px;
+  color: black;
+  background: black;
+  border-radius: 10px;
+}
+
+.month-binary,
+.day-binary {
+  margin-bottom: -10px;
+}
