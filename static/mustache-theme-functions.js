@@ -1,9 +1,11 @@
 (function($) {
 
-	$(".date").each(function() {
+  $(document).ready(function() {
+	  $(".date").each(function() {
     	var dateTime = $(this).text();
-		alert(dateTime);
-      	//$("time", this).html(getBinaryTime(postDate));
+		  alert(dateTime);
+      //$("time", this).html(getBinaryTime(postDate));
     });
+  });
 
 })(jQuery);
