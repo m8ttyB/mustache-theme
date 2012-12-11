@@ -55,6 +55,7 @@ This software is licensed under the [MPL 2.0]:
 
 [secretmustache.com]: http:www.secretmustache.com/
 [Pelican]: https://github.com/getpelican/pelican
+[Python]: http://www.python.org/
 [contributors]: https://github.com/m8ttyb/mustache-theme/contributors
 [pelican-themes]: http://pelican.readthedocs.org/en/2.7.2/pelican-themes.html
 [--list flag]: http://pelican.readthedocs.org/en/2.7.2/pelican-themes.html#listing-the-installed-themes
