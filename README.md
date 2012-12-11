@@ -40,7 +40,7 @@ To install a new theme use the [--install flag]:
 
     pelican-themes --install <path_to_theme>
 
-For development purposes I prefer to use the [--symlink flag] over the [-i flag]:
+For development purposes I prefer to use the [--symlink flag] over the [--install flag]:
 
     pelican-themes --symlink <path_to_theme>
 
