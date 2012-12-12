@@ -2,13 +2,25 @@
 
   $(document).ready(function() {
 	  $(".date").each(function() {
+      //grab the date out the date element on each post
     	var dateTime = $(this).text();
       $(this).attr("title", "Posted on: " + dateTime);
-		  dateTime = new Date(dateTime);		
+		  dateTime = new Date(dateTime);	
+      //Convert the date to our binary representation and
+      //replace the contents of the original date.  
       $(this).html(getBinaryTime(dateTime));
     });
   });
 
+/**
+ * Take a javascript Date object and convert it into a series
+ * of spans representing the date in binary format.
+ *
+ * Format:
+ * M 000000000000
+ * D 000000000000
+ * Y 000000000000
+ */
 function getBinaryTime(date) {
    //define the byte size to use
    var byteSize = 12;
@@ -70,6 +82,17 @@ function getBinaryTime(date) {
    return '<div class="month-binary">' + monthBinaryString + '</div><div class="day-binary">' + dayBinaryString + '</div><div class="year-binary">' + yearBinaryString + '</div>';
  } 
  
+ /**
+  * Break a base ten number into its binary components. My definition
+  * (possibly/probably incorrect) of a binary component is a binary value which
+  * is used to compute a base ten number. So, the binary components of 13 would
+  * be 8, 4, 1. This function returns an array of such components for the given
+  * base ten number. It takes a bit array, which is the base ten representations
+  * of each bit in an n length byte. For a 4 bit byte, the bit array would contain
+  * 1, 2, 4, 8.
+  * Convoluted and un-necessarily complex? Yes.
+  * Fun to write? Also yes.
+  */
  function getBinaryEquivalent(baseTenNum, bitArray) {
    for (var i = 0; i < bitArray.length; i++) {
      if (baseTenNum >= bitArray[i]) {
