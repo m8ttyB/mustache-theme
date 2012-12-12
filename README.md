@@ -15,7 +15,7 @@ A few variables you may wish to add to the pelican settings file.
     DEFAULT_DATE_FORMAT = '%d %m %Y'
 
     # Theming
-    THEME = 'secretmustache-theme'
+    THEME = 'mustache-theme'
     GOOGLE_ANALYTICS = 'UA-xxxxxx-123'
     SECTIONS = [('Blog', 'index.html'),
                 ('Archive', 'archives.html'),
