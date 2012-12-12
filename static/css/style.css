@@ -167,9 +167,11 @@ span.off {
   border: 1px solid grey;
   margin-left: 1px;
   margin-right: 1px;
-  font-size: 10px;
+  font-size: 0px;
   color: #EEE;
   border-radius: 10px;
+  float: left;
+  display: block;
 }
 
 span.on {
@@ -179,13 +181,23 @@ span.on {
   margin-left: 1px;
   margin-right: 1px;
   color: #EEE;
-  font-size: 10px;
+  font-size: 0px;
   color: black;
   background: black;
   border-radius: 10px;
+  float: left;
+  display: block;
 }
 
-.month-binary,
+.month-binary {
+  padding-bottom: 10px;
+}
+
 .day-binary {
-  margin-bottom: -10px;
+  padding-bottom: 10px;
+}
+
+.day-binary,
+.year-binary {
+  clear: both;
 }

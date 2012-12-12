@@ -5,7 +5,6 @@
     	var dateTime = $(this).text();
       $(this).attr("title", "Posted on: " + dateTime);
 		  dateTime = new Date(dateTime);		
-      alert("testing");
       $(this).html(getBinaryTime(dateTime));
     });
   });
