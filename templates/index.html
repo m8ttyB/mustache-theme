@@ -5,36 +5,61 @@
 {% block title %} {{ SITENAME }} {% endblock %}
 
 {% block content %}
-
-{% if articles %}
-  {% for article in (articles_page.object_list if articles_page else articles) %}
-    <div class=entry-overview>
-      <div class=date>{{ article.date.strftime('%d %B %Y') }}</div>
-      <div class=detail>
-          <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
-          <div class=summary><p> {{ article.excerpt }}</p></div>
+      <div class="row">
+        <div class="col-md-12"><img class="img-responsive" src="../theme/images/desert.jpg"></div>
       </div>
-    </div>
-  {% endfor %}
-{%endif%}
 
-{% if articles_page and articles_paginator.num_pages > 1 %}
-<div class="pagination">
-<ul>
-  {% if articles_page.has_previous() %}
-    {% set num = articles_page.previous_page_number() %}
-    <a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">&larr; Previous</a>
-  {% else %}
-    <span class="prev disabled"><a href="#">&larr; Previous</a>
-  {% endif %}
- 
-  {% if articles_page.has_next() %}
-    <span class="next"><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">Next &rarr;</a>
-  {% else %}
-    <span class="next disabled"><a href="#">&rarr; Next</a>
-  {% endif %}
-</ul>
-</div>
-{% endif %}
+      <!-- Recent Blog Posts Display 1st 3 posts -->
+      {% if articles %}
+      <div class="recent-posts">
+        <h2 class="text-thin">Recent Posts</h2>
+        <div class="row">
+          {% for article in (articles_page.object_list if articles_page else articles) %}
+              {% if loop.index >= 4 %}
+                {% break %}
+              {% endif %}
+              <div class="col-md-4 entry-overview">
+                <div class="detail">
+                  <h3 class="article-title"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+                  <h4 class="article-date">{{ article.date.strftime('%Y-%m-%d') }}</h4>
+                  <p class="article-summary">{{ article.excerpt }}</p>
+                </div>
+              </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- My Things -->
+      <div class="my-things">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-thin">My Things</h2>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <a href="archives.html">
+              <h3>Blog</h3>
+              <img class="img-responsive" alt="All blog posts" src="../../theme/images/blog.jpg">
+              <p>All Posts</p>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="#">
+              <h3>Gallery</h3>
+              <img class="img-responsive" alt="coming soon"src="theme/images/coming_soon.jpg">
+              <p>In progress</p>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="http://github.com/m8ttyb">
+              <h3>Projects</h3>
+              <img class="img-responsive" alt="Link to m8ttyb's Github" src="../theme/images/code.jpg">
+              <p>Github</p>
+            </a>
+          </div>
+        </div>
+      </div>
 
 {% endblock %}
