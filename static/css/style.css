@@ -4,8 +4,12 @@ body {
 	font-weight: 300;
 }
 
-.nav {
-	float: right;
+/* override bootstraps defaults*/
+.navbar-default {
+	box-shadow: none;
+	border-color: white;
+	background-image: none;
+	background-color: white;
 }
 
 .text-muted {
@@ -46,7 +50,7 @@ li.tag-3           {font-size: 160.0%;}
 li.tag-4           {font-size: 200.0%;}
 
 /* about img */
-img.align-left { 
-    float: left; 
-    margin: 20px; 
+img.align-left {
+    float: left;
+    margin: 20px;
 }
