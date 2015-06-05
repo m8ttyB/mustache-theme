@@ -15,6 +15,9 @@
         <h2 class="text-thin">Recent Posts</h2>
         <div class="row">
           {% for article in (articles_page.object_list if articles_page else articles) %}
+              {% if loop.index >= 4 %}
+                {% break %}
+              {% endif %}
               <div class="col-md-4 entry-overview">
                 <div class="detail">
                   <h3 class="article-title"><a href="{{ article.url }}">{{ article.title }}</a></h3>
