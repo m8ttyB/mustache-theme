@@ -9,10 +9,30 @@
         <a alt="Home page" href="{{ SITEURL }}">{{ SITENAME }}</a>
       </h1>
       <h4>Adventures of a Scruffy Nerf Herder</h4>
-    <ul class="nav nav-pills">
-		  {% for section in SECTIONS %}
-		  <li role="presentation"><a href="{{ SITEURL }}/{{ section[1]}}">{{ section[0] }}</a></li>
-		  {% endfor %}
-    </ul>
+      <nav class="navbar navbar-default navbar-right" role="navigation">
+        <div class="container-fluid" id="navfluid">
+         <div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+         </div>
+         <div class="collapse navbar-collapse" id="navigationbar">
+           <ul class="nav navbar-nav">
+             <img class="navbar-brand" alt="Secret Mustache" src="{{ SITEURL }}/theme/images/nav_brand.png" />
+             {% for section in SECTIONS %}
+              {% if section[0] == "Home" %}
+                <li><a href="{{ SITEURL }}/{{ section[1]}}">{{ section[0] }}</a></li>
+              {% else %}
+               <li><a href="{{ SITEURL }}/{{ section[1]}}">{{ section[0] }}</a></li>
+              {% endif %}
+             {% endfor %}
+           </ul>
+        </div>
+     </div>
+    </nav>
+
   </div>
 </div>

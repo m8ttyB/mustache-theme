@@ -379,8 +379,10 @@
   "css": [
     "type.less",
     "grid.less",
+    "forms.less",
     "glyphicons.less",
-    "navs.less"
+    "navs.less",
+    "navbar.less"
   ],
   "js": [
     "alert.js",
@@ -396,5 +398,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=ef656f0106c4e59039a4"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=def56c12894c977da416"
 }
